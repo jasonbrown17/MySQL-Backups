@@ -7,4 +7,15 @@ Script setup:
     a) The from address is the address that will show who the email came from
     b) The to address field can be changed to allow for more than one address
 2) Set up a backup user
+    a) grant select, lock tables on *.* to backup@'localhost' identified by 'password';
+3) Encode password
+    jason@example MySQL-Backups]$ python
+    >>> from base64 import b64encode as encode
+    >>> encode("password")
+    'cGFzc3dvcmQ='
 
+    Copy cGFzc3dvcmQ= and paste that as your password
+
+4) Install MySQLdb Python module
+    a) On RHEL/CentOS/Fedora run
+    yum install -y MySQL-python
