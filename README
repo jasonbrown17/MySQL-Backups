@@ -1,0 +1,10 @@
+MySQL Backup Script
+This script is intended to run on a replicated MySQL server.
+
+Script setup:
+
+1) Change the values under the constants section
+    a) The from address is the address that will show who the email came from
+    b) The to address field can be changed to allow for more than one address
+2) Set up a backup user
+
